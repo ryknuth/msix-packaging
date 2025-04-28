@@ -27,9 +27,9 @@ namespace MSIX {
     // We've seen cases were uloc_toLanguageTag returns zh-CN. Add here any inconsistencies.
     // Some AppxBundleManifests have zh-CN, zh-TW, zh-HK as languages.
     static const Bcp47Entry bcp47List[] = {
-        Bcp47Entry(u8"zh-cn", u8"zh-Hans-CN"),
-        Bcp47Entry(u8"zh-hk", u8"zh-Hant-HK"),
-        Bcp47Entry(u8"zh-tw", u8"zh-Hant-TW"),
+        Bcp47Entry("zh-cn", "zh-Hans-CN"),
+        Bcp47Entry("zh-hk", "zh-Hant-HK"),
+        Bcp47Entry("zh-tw", "zh-Hant-TW"),
     };
 
     Bcp47Tag::Bcp47Tag(const std::string& fullTag, bool allowPseudoLocale)
