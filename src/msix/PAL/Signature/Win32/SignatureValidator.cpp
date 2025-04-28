@@ -494,7 +494,6 @@ namespace MSIX
 
 
     bool SignatureValidator::Validate(
-        IMsixFactory* factory,
         IMsixFactory* /*factory*/,
         MSIX_VALIDATION_OPTION option,
         const ComPtr<IStream>& stream,
