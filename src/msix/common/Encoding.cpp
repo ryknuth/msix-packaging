@@ -7,7 +7,6 @@
 #include <algorithm>
 #include <vector>
 #include <array>
-#include <cstdint>
 
 #include "Encoding.hpp"
 #include "Exceptions.hpp"

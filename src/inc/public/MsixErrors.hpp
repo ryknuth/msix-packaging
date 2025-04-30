@@ -6,7 +6,10 @@
 #ifndef MSIX_MSIX_ERRORS__H
 #define MSIX_MSIX_ERRORS__H
 
+#ifdef WIN32
 #include <cstdint>
+#endif
+
 
 namespace MSIX {
 

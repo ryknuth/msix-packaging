@@ -3,7 +3,10 @@
 //  See LICENSE file in the project root for full license information.
 // 
 #pragma once
+#ifndef NOMINMAX
 #define NOMINMAX /* windows.h, or more correctly windef.h, defines min as a macro... */
+#endif
+
 #include "MSIXWindows.hpp"
 #include "Exceptions.hpp"
 #include "StreamBase.hpp"

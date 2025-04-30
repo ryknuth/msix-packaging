@@ -6,7 +6,7 @@
 #include "TimeHelpers.hpp"
 
 #include <chrono>
-#include <time.h>
+#include <ctime>
 
 namespace MSIX {
 
@@ -17,7 +17,11 @@ namespace MSIX {
 
         const auto now = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
         struct tm localTime;
+#ifdef WIN32
         localtime_s(&localTime, &now);
+#else
+        localtime_r(&now, &localTime);
+#endif
         Initialize(&localTime);
     }
 

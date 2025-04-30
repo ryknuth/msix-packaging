@@ -57,8 +57,8 @@ namespace MSIX {
             auto position = found+1;
             found = bcp47Tag.find(delimiter, position);
             auto tag = bcp47Tag.substr(position, found - position);
-            auto maxTagLength = allowPseudoLocale ? 5 : 4;
-            ThrowErrorIf(Error::Unexpected, (tag.size() < 2 || tag.size() > maxTagLength), "Malformed Bcp47 tag");
+            auto maxTagLength = allowPseudoLocale ? 5u : 4u;
+            ThrowErrorIf(Error::Unexpected, (tag.size() < 2u || tag.size() > maxTagLength), "Malformed Bcp47 tag");
             if (tag.size() == 4)
             {   // Script tag size is always 4
                 m_script = tag;
